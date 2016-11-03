@@ -55,7 +55,7 @@ NAGIRA_LOG=${NAGIRA_LOG:-/var/log/nagios/nagira.log}
 export RACK_ENV NAGIRA_LOG NAGIRA_USER RVM_STRING
 
 get_pid () {
-  echo $(ps -C nagira,ruby,ruby1.9.1,ruby1.9.3,ruby2.0,ruby2.1,ruby2.2 -o pid,cmd | \
+  echo $(ps -C nagira,ruby,ruby1.9.1,ruby1.9.3,ruby2.0,ruby2.1,ruby2.2,ruby2.3 -o pid,cmd | \
             awk '$0 ~ /bin\/nagira *$/ {print $1}')
 }
 
